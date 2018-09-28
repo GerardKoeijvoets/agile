@@ -24,9 +24,9 @@ public class Controller {
 		return ingredientRepo.getIngredientsByType(type);
 	}
 	
-	public List<Recipe> getRecipesForIngredients (String base, String green, String meat) {
+	public List<String> getRecipesForIngredients (String base, String green, String meat) {
 		
-		List<Recipe> recipes = new ArrayList<>();
+		return recipeRepo.getRecipesForIngredients(base, green, meat);
 		
 	}
 	
