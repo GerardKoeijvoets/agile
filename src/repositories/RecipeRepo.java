@@ -1,6 +1,9 @@
 package repositories;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import domein.Recipe;
 
 public class RecipeRepo {
 	List<Recipe> recipes;
@@ -9,15 +12,15 @@ public class RecipeRepo {
 		setRecipes();
 	}
 
-	public List<Recipe> getRecipesForIngredients(String base, String green, String meat) {
-		return recipes;
-	}
 
 	private void setRecipes() {
-		recipes
+		recipes = new ArrayList<>();
 		
 		
 	}
 	
-	public 
+	public List<String> getRecipesForIngredients (String base, String green, String meat) {
+		
+		return 
+	}
 }

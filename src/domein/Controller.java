@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import repositories.IngredientRepo;
-import repositories.Recipe;
+import domein.Recipe;
 import repositories.RecipeRepo;
 
 public class Controller {
@@ -18,11 +18,10 @@ public class Controller {
 	public Controller () {
 		ingredientRepo = new IngredientRepo();
 		recipeRepo = new RecipeRepo();
-		
 	}
 	
-	public List<Ingredient> GetIngredientsByType (String type) {
-		return recipeRepo.getIngredientsByType(type);
+	public List<String> GetIngredientsByType (String type) {
+		return ingredientRepo.getIngredientsByType(type);
 	}
 	
 	public List<Recipe> getRecipesForIngredients (String base, String green, String meat) {

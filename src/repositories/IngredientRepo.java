@@ -6,7 +6,7 @@ import java.util.List;
 import domein.Ingredient;
 
 public class IngredientRepo {
-	List<Ingredients> ingredients;
+	List<Ingredient> ingredients;
 	
 	public IngredientRepo () {
 		setIngredients();
@@ -16,12 +16,12 @@ public class IngredientRepo {
 		ingredients = new ArrayList<>();
 		
 	}
-	public List<Ingredient> getIngredientsByType (String type) {
+	public List<String> getIngredientsByType (String type) {
 		
-		List<Ingredient> ingredientsByType = new ArrayList<>();
+		List<String> ingredientsByType = new ArrayList<>();
 		for (Ingredient i : ingredients) {
-			if (i.getType().equals(Type)) 
-				ingredientsByType.add(i);
+			if (i.getType().equals(type)) 
+				ingredientsByType.add(i.getName());
 		}
 		return ingredientsByType;
 	}
